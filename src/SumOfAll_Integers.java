@@ -12,8 +12,10 @@ public class SumOfAll_Integers {
         int[] arr = {19,12,14,10,12,34};
 
         List<String> stringList = Arrays.asList("abp","fko","zxy","jjo");
-        List<String> list = stringList.stream().sorted(Comparator.comparing(String::toString)).toList();
+        List<String> list = stringList.stream().sorted(Comparator.comparing(String::toString)).limit(2).toList();
         System.out.println(list);
+
+
 
         int[] sortInAscending = Arrays.stream(arr).boxed()
                 .sorted(Comparator.comparingInt((x-> (int) x)))
